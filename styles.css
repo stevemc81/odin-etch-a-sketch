@@ -3,17 +3,25 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 16px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .container {
-    width: 320px;
+    width: 600px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .grid-square {
     box-sizing: border-box;
-    width: 20px;
-    height: 20px;
-    border: 1px solid grey;
+    border: 1px solid lightgrey;
 }
