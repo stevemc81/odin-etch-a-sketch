@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-square {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 1px solid grey;
+}
