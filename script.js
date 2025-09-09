@@ -26,8 +26,16 @@ function createGrid(size) {
         box.style.width = `${600 / size}px`;
         box.style.height = `${600 / size}px`;
         box.addEventListener("mouseover", () => {
-            box.style.backgroundColor = "black";
+            box.style.backgroundColor = `${randomColor()}`;
         });
         container.appendChild(box);
     }
+}
+
+function randomNumber() {
+    return Math.floor(Math.random() * 256);
+}
+
+function randomColor() {
+    return `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`;
 }
