@@ -1,4 +1,5 @@
 const gridSizeBtn = document.querySelector("#grid-size-btn");
+const resetBtn = document.querySelector("#reset-btn");
 const container = document.querySelector(".container");
 
 createGrid(16);
@@ -11,6 +12,10 @@ gridSizeBtn.addEventListener("click", () => {
     } else {
         createGrid(gridSize);
     }
+});
+
+resetBtn.addEventListener("click", () => {
+    createGrid(16);
 });
 
 function createGrid(size) {
