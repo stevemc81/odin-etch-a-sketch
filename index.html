@@ -9,12 +9,27 @@
 </head>
 
 <body>
-    <h1>Etch-A-Sketch</h1>
+    <h1>Etch-A-Sketch by Steve</h1>
+    <div class="container"></div>
+    <div class="options">
+        <h2>Drawing options</h2>
+        <div>
+            <input type="radio" name="mode" id="black" value="black" checked>
+            <label for="black">Black squares</label>
+        </div>
+        <div>
+            <input type="radio" name="mode" id="random" value="random">
+            <label for="random">Random coloured squares</label>
+        </div>
+        <div>
+            <input type="radio" name="mode" id="fade-in" value="fade-in">
+            <label for="random">Fade-in squares</label>
+        </div>
+    </div>
     <div class="controls">
         <button id="grid-size-btn">Choose grid size</button>
         <button id="reset-btn">Reset</button>
     </div>
-    <div class="container"></div>
     <script src="script.js"></script>
 </body>
 

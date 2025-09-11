@@ -2,6 +2,7 @@ const gridSizeBtn = document.querySelector("#grid-size-btn");
 const resetBtn = document.querySelector("#reset-btn");
 const container = document.querySelector(".container");
 
+
 createGrid(16);
 
 gridSizeBtn.addEventListener("click", () => {
@@ -26,7 +27,25 @@ function createGrid(size) {
         box.style.width = `${600 / size}px`;
         box.style.height = `${600 / size}px`;
         box.addEventListener("mouseover", () => {
-            box.style.backgroundColor = `${randomColor()}`;
+            const mode = document.querySelector("input[name='mode']:checked");
+            switch (mode.value) {
+                case "black":
+                    box.style.backgroundColor = `black`;
+                    box.style.opacity = 1;
+                    break;
+                case "random":
+                    box.style.backgroundColor = `${randomColor()}`;
+                    break;
+                case "fade-in":
+                    box.style.backgroundColor = `black`;
+                    let currentOpacity = box.style.opacity;
+                    if (currentOpacity) {
+                        box.style.opacity = Number(currentOpacity) + 0.1;
+                    } else {
+                        box.style.opacity = 0.1;
+                    }
+                    break;
+            }
         });
         container.appendChild(box);
     }
